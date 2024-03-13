@@ -1,5 +1,3 @@
-Certainly! To make your README files look visually appealing on GitHub, you can utilize Markdown syntax along with some additional formatting techniques. Here's an enhanced version of the README files for each task with improved styling:
-
 ### Task 1: Chatbot AI
 
 #### Description
