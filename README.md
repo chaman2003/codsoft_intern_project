@@ -17,10 +17,6 @@ This project implements a basic chatbot using Python. The chatbot responds to us
 1. Run the chatbot by executing the provided Python script.
 2. Refer to the embedded actions listed for user reference.
 
-#### Repository
-[Link to Repository](#) <!-- Replace with your repository link -->
-
----
 
 ### Task 2: Tic Tac Toe AI
 
@@ -39,10 +35,6 @@ This project implements a Tic Tac Toe game where the player can play against an 
 1. Play the game by executing the provided Python script.
 2. Enter row and column indices to make moves.
 
-#### Repository
-[Link to Repository](#) <!-- Replace with your repository link -->
-
----
 
 ### Task 3: Recommendation System
 
@@ -61,9 +53,4 @@ This project implements a basic movie recommendation system based on user input.
 1. Use the recommendation system by executing the provided Python script.
 2. Enter a movie name to receive recommendations.
 
-#### Repository
-[Link to Repository](#) <!-- Replace with your repository link -->
 
----
-
-Feel free to adjust the content and styling as needed. This format should make your README files more visually appealing on GitHub. Let me know if you need further assistance!
