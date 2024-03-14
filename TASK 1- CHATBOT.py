@@ -33,12 +33,19 @@ responses = {
 }
 
 def generate_response(user_input, user_name):
-    # Search for the most similar response
-    matched_response = difflib.get_close_matches(user_input.lower(), responses.keys(), n=1, cutoff=0.6)
-    if matched_response:
-        return random.choice(responses[matched_response[0]]).format(user_name=user_name)
+    # Convert user input to lowercase
+    user_input_lower = user_input.lower()
+    
+    # Check if the user input contains any predefined action keywords
+    matched_actions = [action for action in responses.keys() if action in user_input_lower]
+    
+    if matched_actions:
+        # If there are matched actions, randomly select a response from one of them
+        matched_action = random.choice(matched_actions)
+        return random.choice(responses[matched_action]).format(user_name=user_name)
     else:
         return random.choice(responses["default"]).format(user_name=user_name)
+
 
 def main():
     print("Welcome to Chammy! An initial AI ChatBot developed by CHAMAN\n\n Embedded actions: \"hi\", \"bye\", \"who are you\", \"good morning\", \"good afternoon\", \"good evening\", \"good night\", \"how are you?\", \"where do you live?\", \"do you like sports?\", \"tell me a joke?\", \"how old are you?\", \"do you have any siblings?\", \"what is your favorite color?\", \"do you dream?\", \"can you cook?\", \"sister\", \"brother\", \"run\", \"yes\", \"no\", \"sad\", \"happy\", \"quote\", \"motivate\"\"fine\"")
