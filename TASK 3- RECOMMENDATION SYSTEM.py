@@ -1,12 +1,10 @@
-
-
 import random
 import difflib
 import re
 
 # List of movies with attributes
 movies_data = {
-    'Avatar': {'genres': 'Action, Adventure, Fantasy'},
+       'Avatar': {'genres': 'Action, Adventure, Fantasy'},
     'Titanic': {'genres': 'Drama, Romance'},
     'Avengers: Endgame': {'genres': 'Action, Adventure, Drama'},
     'The Lion King (2019)': {'genres': 'Animation, Adventure, Drama'},
@@ -15,7 +13,6 @@ movies_data = {
     'Frozen II': {'genres': 'Animation, Adventure, Comedy'},
     'The Fate of the Furious': {'genres': 'Action, Adventure, Crime'},
     'Harry Potter and the Deathly Hallows – Part 2': {'genres': 'Adventure, Drama, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Star Wars: Episode I – The Phantom Menace': {'genres': 'Action, Adventure, Fantasy'},
     'Black Panther': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Philosopher\'s Stone': {'genres': 'Adventure, Family, Fantasy'},
@@ -27,7 +24,7 @@ movies_data = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
+
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -40,17 +37,14 @@ movies_data = {
     'The Jungle Book (2016)': {'genres': 'Adventure, Drama, Family'},
     'Finding Dory': {'genres': 'Animation, Adventure, Comedy'},
     'Star Wars: Episode III – Revenge of the Sith': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Fellowship of the Ring': {'genres': 'Action, Adventure, Drama'},
     'Harry Potter and the Order of the Phoenix': {'genres': 'Action, Adventure, Family'},
     'The Dark Knight': {'genres': 'Action, Crime, Drama'},
     'Harry Potter and the Half-Blood Prince': {'genres': 'Action, Adventure, Family'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Fellowship of the Ring': {'genres': 'Action, Adventure, Drama'},
     'The Dark Knight Rises': {'genres': 'Action, Thriller'},
     'Pirates of the Caribbean: On Stranger Tides': {'genres': 'Action, Adventure, Fantasy'},
     'Jurassic World': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -64,7 +58,6 @@ movies_data = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Skyfall': {'genres': 'Action, Adventure, Thriller'},
     'The Dark Knight Rises': {'genres': 'Action, Thriller'},
     'Alice in Wonderland': {'genres': 'Adventure, Family, Fantasy'},
@@ -78,7 +71,6 @@ movies_data = {
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
@@ -94,7 +86,6 @@ movies_data = {
     'Alice in Wonderland (2010)': {'genres': 'Adventure, Family, Fantasy'},
     'Pirates of the Caribbean: Dead Man\'s Chest': {'genres': 'Action, Adventure, Fantasy'},
     'Despicable Me 3': {'genres': 'Animation, Adventure, Comedy'},
-    'The Lord of the Rings: The Fellowship of the Ring': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'The Lion King (2019)': {'genres': 'Animation, Adventure, Drama'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -110,7 +101,6 @@ movies_data = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -128,7 +118,6 @@ movies_data = {
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
@@ -144,7 +133,6 @@ movies_data = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -162,7 +150,6 @@ movies_data = {
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
@@ -178,7 +165,6 @@ movies_data = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -210,7 +196,6 @@ additional_movies = {
     'Frozen II': {'genres': 'Animation, Adventure, Comedy'},
     'The Fate of the Furious': {'genres': 'Action, Adventure, Crime'},
     'Harry Potter and the Deathly Hallows – Part 2': {'genres': 'Adventure, Drama, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Star Wars: Episode I – The Phantom Menace': {'genres': 'Action, Adventure, Fantasy'},
     'Black Panther': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Philosopher\'s Stone': {'genres': 'Adventure, Family, Fantasy'},
@@ -222,7 +207,6 @@ additional_movies = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -235,17 +219,14 @@ additional_movies = {
     'The Jungle Book (2016)': {'genres': 'Adventure, Drama, Family'},
     'Finding Dory': {'genres': 'Animation, Adventure, Comedy'},
     'Star Wars: Episode III – Revenge of the Sith': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Fellowship of the Ring': {'genres': 'Action, Adventure, Drama'},
     'Harry Potter and the Order of the Phoenix': {'genres': 'Action, Adventure, Family'},
     'The Dark Knight': {'genres': 'Action, Crime, Drama'},
     'Harry Potter and the Half-Blood Prince': {'genres': 'Action, Adventure, Family'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Fellowship of the Ring': {'genres': 'Action, Adventure, Drama'},
     'The Dark Knight Rises': {'genres': 'Action, Thriller'},
     'Pirates of the Caribbean: On Stranger Tides': {'genres': 'Action, Adventure, Fantasy'},
     'Jurassic World': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -259,7 +240,6 @@ additional_movies = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Skyfall': {'genres': 'Action, Adventure, Thriller'},
     'The Dark Knight Rises': {'genres': 'Action, Thriller'},
     'Alice in Wonderland': {'genres': 'Adventure, Family, Fantasy'},
@@ -273,7 +253,6 @@ additional_movies = {
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
@@ -289,7 +268,6 @@ additional_movies = {
     'Alice in Wonderland (2010)': {'genres': 'Adventure, Family, Fantasy'},
     'Pirates of the Caribbean: Dead Man\'s Chest': {'genres': 'Action, Adventure, Fantasy'},
     'Despicable Me 3': {'genres': 'Animation, Adventure, Comedy'},
-    'The Lord of the Rings: The Fellowship of the Ring': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'The Lion King (2019)': {'genres': 'Animation, Adventure, Drama'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -305,7 +283,6 @@ additional_movies = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -323,7 +300,6 @@ additional_movies = {
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
@@ -339,7 +315,6 @@ additional_movies = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -357,7 +332,6 @@ additional_movies = {
     'Shrek 2': {'genres': 'Animation, Adventure, Comedy'},
     'Finding Nemo': {'genres': 'Animation, Adventure, Comedy'},
     'Harry Potter and the Goblet of Fire': {'genres': 'Adventure, Family, Fantasy'},
-    'The Lord of the Rings: The Return of the King': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: No Way Home': {'genres': 'Action, Adventure, Fantasy'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Harry Potter and the Chamber of Secrets': {'genres': 'Adventure, Family, Fantasy'},
@@ -373,7 +347,6 @@ additional_movies = {
     'Iron Man 3': {'genres': 'Action, Adventure, Sci-Fi'},
     'Minions': {'genres': 'Animation, Adventure, Comedy'},
     'Aquaman': {'genres': 'Action, Adventure, Fantasy'},
-    'The Lord of the Rings: The Two Towers': {'genres': 'Action, Adventure, Drama'},
     'Spider-Man: Far From Home': {'genres': 'Action, Adventure, Sci-Fi'},
     'Captain Marvel': {'genres': 'Action, Adventure, Sci-Fi'},
     'Transformers: Dark of the Moon': {'genres': 'Action, Adventure, Sci-Fi'},
@@ -396,7 +369,6 @@ additional_movies = {
 
 movies_data.update(additional_movies)
 
-# Function to recommend movies based on user preferences
 def recommend_movies(movie, movies_data):
     # Extract genres of the input movie
     input_genres = movies_data.get(movie, {}).get('genres', '')
@@ -408,22 +380,26 @@ def recommend_movies(movie, movies_data):
             if input_genres in attributes.get('genres', ''):
                 similar_movies.append(title)
     
-    return similar_movies[:5]  # Return top 5 similar movies
+    if similar_movies:
+        return similar_movies[:5]  # Return top 5 similar movies
+    else:
+        print("No similar movies found based on genres. Providing random movie suggestions.")
+        return generate_random_movies(movies_data)
 
-# Function to print a separator line
+def generate_random_movies(movies_data, num_movies=5):
+    return random.sample(list(movies_data.keys()), num_movies)
+
 def print_separator():
     print('-' * 50)
 
-# Function to find the closest matching movie name
 def find_closest_movie(user_input, movies_data):
-    user_input_processed = re.sub(r'\W+', '', user_input).lower()  # Remove non-alphanumeric characters and convert to lowercase
+    user_input_processed = re.sub(r'\W+', '', user_input).lower()
     for movie_title in movies_data.keys():
-        movie_title_processed = re.sub(r'\W+', '', movie_title).lower()  # Remove non-alphanumeric characters and convert to lowercase
+        movie_title_processed = re.sub(r'\W+', '', movie_title).lower()
         if user_input_processed in movie_title_processed:
             return movie_title
     return None
 
-# Main loop
 while True:
     print_separator()
     user_movie = input("Enter a movie name (type 'exit' to quit): ").strip()
@@ -432,7 +408,6 @@ while True:
         print("Exiting...")
         break
 
-    # Find the closest matching movie name
     matched_movie = find_closest_movie(user_movie, movies_data)
     if matched_movie:
         user_movie = matched_movie
