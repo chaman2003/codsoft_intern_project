@@ -6,6 +6,7 @@ def print_board(board):
 
 # Function to get a list of empty cells on the board
 def get_empty_cells(board):
+    """Get a list of empty cells on the board."""
     return [(i, j) for i in range(3) for j in range(3) if board[i][j] == '_']
 
 def check_winner(board):
@@ -28,15 +29,7 @@ def get_all_lines(board):
 def player_move(board, name):
     """Function for the player to make a move."""
     move_row = input("Enter your move (row): ")
-    if move_row.lower() == 'quit' or move_row.lower() == 'exit':
-        print("Game ended. Thanks for playing!")
-        exit()
-    
     move_col = input("Enter your move (column): ")
-    if move_col.lower() == 'quit' or move_col.lower() == 'exit':
-        print("Game ended. Thanks for playing!")
-        exit()
-
     try:
         row, col = int(move_row) - 1, int(move_col) - 1
         if not (0 <= row <= 2 and 0 <= col <= 2):
@@ -96,7 +89,7 @@ def main():
     """Main function to start the game."""
     print("Welcome to Tic-Tac-Toe!")
     name = input("Enter your name: ")
-    print("Welcome, " + name + "! Type 'quit' or 'exit' to end the game.")
+    print("Welcome, " + name + "! Type 'exit' to quit.")
 
     board = [['_'] * 3 for _ in range(3)]
     print_board(board)
