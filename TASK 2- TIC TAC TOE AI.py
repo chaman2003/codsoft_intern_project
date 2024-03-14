@@ -6,8 +6,6 @@ def print_board(board):
 
 # Function to get a list of empty cells on the board
 def get_empty_cells(board):
-    def get_empty_cells(board):
-    """Get a list of empty cells on the board."""
     return [(i, j) for i in range(3) for j in range(3) if board[i][j] == '_']
 
 def check_winner(board):
@@ -125,4 +123,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
