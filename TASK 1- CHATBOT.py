@@ -33,14 +33,14 @@ responses = {
 }
 
 def generate_response(user_input, user_name):
-    # Convert user input to lowercase
+  
     user_input_lower = user_input.lower()
     
-    # Check if the user input contains any predefined action keywords
+   
     matched_actions = [action for action in responses.keys() if action in user_input_lower]
     
     if matched_actions:
-        # If there are matched actions, randomly select a response from one of them
+     
         matched_action = random.choice(matched_actions)
         return random.choice(responses[matched_action]).format(user_name=user_name)
     else:
