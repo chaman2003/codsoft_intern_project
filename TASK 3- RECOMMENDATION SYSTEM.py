@@ -2,7 +2,6 @@ import random
 import difflib
 import re
 
-# List of movies with attributes
 movies_data = {
        'Avatar': {'genres': 'Action, Adventure, Fantasy'},
     'Titanic': {'genres': 'Drama, Romance'},
@@ -185,7 +184,6 @@ movies_data = {
 
 }
 
-# Add more movies and genres
 additional_movies = {
      'Avatar': {'genres': 'Action, Adventure, Fantasy'},
     'Titanic': {'genres': 'Drama, Romance'},
@@ -370,10 +368,8 @@ additional_movies = {
 movies_data.update(additional_movies)
 
 def recommend_movies(movie, movies_data):
-    # Extract genres of the input movie
     input_genres = movies_data.get(movie, {}).get('genres', '')
     
-    # Find movies with similar genres
     similar_movies = []
     for title, attributes in movies_data.items():
         if title != movie:
@@ -381,7 +377,7 @@ def recommend_movies(movie, movies_data):
                 similar_movies.append(title)
     
     if similar_movies:
-        return similar_movies[:5]  # Return top 5 similar movies
+        return similar_movies[:5]  
     else:
         print("No similar movies found based on genres. Providing random movie suggestions.")
         return generate_random_movies(movies_data)
