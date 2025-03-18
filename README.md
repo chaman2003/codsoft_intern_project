@@ -6,7 +6,7 @@ AI BEGINNER PROJECTS
 
 ---
 
-#### Task 1: Chatbot AI
+#### Project 1: Chatbot AI
 - **Description:** Basic chatbot responding to greetings, farewells, and inquiries.
 - **Features:** 
   - Utilizes `difflib` library for response matching .
