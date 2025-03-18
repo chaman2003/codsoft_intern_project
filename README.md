@@ -14,14 +14,14 @@ AI BEGINNER PROJECTS
 
 ---
 
-#### Task 2: Tic Tac Toe AI
+#### Project 2: Tic Tac Toe AI
 - **Description:** Tic Tac Toe game with an AI opponent using the minimax algorithm.
 - **Features:** 
   - Player moves and AI decision-making with minimax.
 
 ---
 
-#### Task 3: Recommendation System
+#### Project 3: Recommendation System
 - **Description:** Movie recommendation system based on user input and genres.
 - **Features:** 
   - Provides personalized recommendations by genre similarity.
