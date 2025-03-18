@@ -1,4 +1,4 @@
-### CODSOFT - AI DEVELOPER INTERNSHIP PROJECTS 
+AI BEGINNER PROJECTS 
 
 #### Common Features:
 - **Description:** These projects implement various AI applications using Python.
